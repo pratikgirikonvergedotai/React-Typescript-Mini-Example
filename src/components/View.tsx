@@ -9,7 +9,7 @@ type propsInput = {
 // component returns jsx element 
 // props return type define above
 export function View(props: propsInput):JSX.Element{
-    // explicitly defining types for useState instead of Type inference (typescript recognize type . example setting state in useState : useState(0) here it will be number) . which are string and null 
+    // explicitly defining types (string or null) for useState instead of Type inference (typescript recognize type . example setting state in useState : useState(0) here it will be number) .
     const [state, setState] = useState<string | null>(() => {
         // return a callback so that it is not compute hungry. 
         // same in onclick event below . which is proper way 
